@@ -1,0 +1,47 @@
+{
+  "name": "2019",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "DIR=\"$(ls -d day-* | tail -n 1)\" nodemon --watch $DIR --exec \"npm run $DIR --silent\"",
+    "rerun": "nodemon --watch $DAY --exec \"npm run $DAY --silent\"",
+    "day-01": "parcel build --no-minify --no-source-maps --target node --public-url './' day-01/solutions.js && node dist/solutions.js",
+    "day-02": "parcel build --no-minify --no-source-maps --target node --public-url './' day-02/solutions.js && node dist/solutions.js",
+    "day-03": "parcel build --no-minify --no-source-maps --target node --public-url './' day-03/solutions.js && node dist/solutions.js",
+    "day-04": "parcel build --no-minify --no-source-maps --target node --public-url './' day-04/solutions.js && node dist/solutions.js",
+    "day-05": "parcel build --no-minify --no-source-maps --target node --public-url './' day-05/solutions.js && node dist/solutions.js",
+    "day-06": "parcel build --no-minify --no-source-maps --target node --public-url './' day-06/solutions.js && node dist/solutions.js",
+    "day-07": "parcel build --no-minify --no-source-maps --target node --public-url './' day-07/solutions.js && node dist/solutions.js",
+    "day-08": "parcel build --no-minify --no-source-maps --target node --public-url './' day-08/solutions.js && node dist/solutions.js",
+    "day-09": "parcel build --no-minify --no-source-maps --target node --public-url './' day-09/solutions.js && node dist/solutions.js",
+    "day-10": "parcel build --no-minify --no-source-maps --target node --public-url './' day-10/solutions.js && node dist/solutions.js",
+    "day-11": "parcel build --no-minify --no-source-maps --target node --public-url './' day-11/solutions.js && node dist/solutions.js",
+    "day-12": "parcel build --no-minify --no-source-maps --target node --public-url './' day-12/solutions.js && node dist/solutions.js",
+    "day-13": "parcel build --no-minify --no-source-maps --target node --public-url './' day-13/solutions.js && node dist/solutions.js",
+    "day-14": "parcel build --no-minify --no-source-maps --target node --public-url './' day-14/solutions.js && node dist/solutions.js",
+    "day-15": "parcel build --no-minify --no-source-maps --target node --public-url './' day-15/solutions.js && node dist/solutions.js",
+    "day-16": "parcel build --no-minify --no-source-maps --target node --public-url './' day-16/solutions.js && node dist/solutions.js",
+    "day-17": "parcel build --no-minify --no-source-maps --target node --public-url './' day-17/solutions.js && node dist/solutions.js",
+    "day-18": "parcel build --no-minify --no-source-maps --target node --public-url './' day-18/solutions.js && node dist/solutions.js",
+    "day-19": "parcel build --no-minify --no-source-maps --target node --public-url './' day-19/solutions.js && node dist/solutions.js",
+    "day-20": "parcel build --no-minify --no-source-maps --target node --public-url './' day-20/solutions.js && node dist/solutions.js",
+    "day-21": "parcel build --no-minify --no-source-maps --target node --public-url './' day-21/solutions.js && node dist/solutions.js",
+    "day-22": "parcel build --no-minify --no-source-maps --target node --public-url './' day-22/solutions.js && node dist/solutions.js",
+    "day-23": "parcel build --no-minify --no-source-maps --target node --public-url './' day-23/solutions.js && node dist/solutions.js",
+    "day-24": "parcel build --no-minify --no-source-maps --target node --public-url './' day-24/solutions.js && node dist/solutions.js",
+    "day-25": "parcel build --no-minify --no-source-maps --target node --public-url './' day-25/solutions.js && node dist/solutions.js"
+  },
+  "author": "The Amazing PT",
+  "license": "The Amazing License",
+  "devDependencies": {
+    "nodemon": "^2.0.1",
+    "parcel": "^1.12.4",
+    "prettier": "^1.19.1"
+  },
+  "dependencies": {
+    "@turf/line-intersect": "^6.0.2",
+    "@turf/turf": "^5.1.6",
+    "lodash.intersection": "^4.4.0",
+    "lodash.intersectionwith": "^4.4.0",
+    "manhattan": "^1.0.0"
+  }
+}
