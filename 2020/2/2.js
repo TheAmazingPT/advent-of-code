@@ -1,8 +1,6 @@
 const inputReal = require('../utils/input')(2);
-const inputTest = require('../utils/input-test-2')(2);
 
 console.log(main(inputReal));
-console.log(main(inputTest));
 
 function main(input) {
   const pwmap = input.map(x => {
