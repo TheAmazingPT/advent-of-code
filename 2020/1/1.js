@@ -1,11 +1,8 @@
-const fs = require('fs');
-const path = require('path');
+const inputReal = require('../utils/input')(1);
+const inputTest = require('../utils/input-test-1')(1);
 
-const inputPath = path.resolve(__dirname, 'input.txt');
-const inputRaw = fs.readFileSync(inputPath, 'utf8');
-const input = inputRaw.split('\n').filter(x => Boolean(x.trim()));
-
-console.log(main(input));
+console.log(main(inputReal));
+console.log(main(inputTest));
 
 function main(input) {
   const numbers = input.map(Number);
