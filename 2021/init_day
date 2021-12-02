@@ -5,10 +5,11 @@ YEAR=2021
 
 DAY_DIR="$PWD/$DAY"
 DAY_INPUT="$DAY_DIR/input"
+DAY_MAIN="$DAY_DIR/main.ts"
 DAY_PART_1="$DAY_DIR/part_1.ts"
 DAY_PART_2="$DAY_DIR/part_2.ts"
 
-DENO_CMD="deno run --watch --allow-read $DAY_PART_1 $DAY_PART_2"
+DENO_CMD="deno run --watch --allow-read $DAY_MAIN"
 
 if [ -z "$DAY" ]; then
   echo "No Argument found! Please use like:"
@@ -17,9 +18,7 @@ if [ -z "$DAY" ]; then
 fi
 
 if [ ! -d "$DAY_DIR" ]; then
-  mkdir -p "$DAY_DIR"
-  cp template.ts "$DAY_PART_1"
-  cp template.ts "$DAY_PART_2"
+  cp -r .template "$DAY_DIR"
 fi
 
 curl --silent --location \
