@@ -1,7 +1,19 @@
 #!/usr/bin/env bash
 
-DAY="$1"
+if [ -z "$1" ]; then
+  echo "No Argument found! Please use like:"
+  echo "    init_day N (1-31)"
+  exit 1
+fi
+
 YEAR=2021
+DAY_RAW="$1"
+
+if [ "$DAY_RAW" -lt 10 ]; then
+  DAY="0$DAY_RAW"
+else
+  DAY="$DAY_RAW"
+fi
 
 DAY_DIR="$PWD/$DAY"
 DAY_INPUT="$DAY_DIR/input"
@@ -11,12 +23,6 @@ DAY_PART_2="$DAY_DIR/part_2.ts"
 
 DENO_CMD="deno run --watch --allow-read $DAY_MAIN"
 
-if [ -z "$DAY" ]; then
-  echo "No Argument found! Please use like:"
-  echo "    init_day N (1-31)"
-  exit 1
-fi
-
 if [ ! -d "$DAY_DIR" ]; then
   cp -r .template "$DAY_DIR"
 fi
@@ -24,7 +30,7 @@ fi
 curl --silent --location \
   --output "$DAY_INPUT" \
   --cookie session=$(cat session.cookie) \
-  https://adventofcode.com/"$YEAR"/day/"$DAY"/input
+  https://adventofcode.com/"$YEAR"/day/"$DAY_RAW"/input
 
 i3-msg --quiet "exec WINIT_X11_SCALE_FACTOR=1 alacritty --working-directory $DAY_DIR --command $DENO_CMD"
 vim "$DAY_PART_1"
