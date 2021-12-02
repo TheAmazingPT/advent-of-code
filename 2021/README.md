@@ -4,6 +4,8 @@ I also created a fancy shmancy init script for this year to create a new
 directory for each puzzle day with a few standards and to automatically
 download the input file from adventofcode.com.
 
+https://user-images.githubusercontent.com/984400/144475797-4cd85de5-08bd-4a79-a18b-286002815fdc.mp4
+
 ### Setup & Usage
 You need to have installed:
 - Deno 1.16.0 or later
