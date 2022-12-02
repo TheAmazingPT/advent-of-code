@@ -32,5 +32,6 @@ curl --silent --location \
   --cookie session=$(cat session.cookie) \
   https://adventofcode.com/"$YEAR"/day/"$DAY_RAW"/input
 
+xdg-open "https://adventofcode.com/$YEAR/day/$DAY_RAW"
 i3-msg --quiet "exec WINIT_X11_SCALE_FACTOR=1 alacritty --working-directory $DAY_DIR --command $DENO_CMD"
 vim "$DAY_PART_1"
